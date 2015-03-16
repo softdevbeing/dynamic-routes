@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DynamicRoutes</title>
+  <%= csrf_meta_tags %>
+
+  <% css.each do |css_file| %>
+      <%= stylesheet_link_tag    *css_file, media: 'all' %>
+  <% end %>
+
+  <% scripts.each do |script| %>
+      <%= javascript_include_tag *script %>
+  <% end %>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
