@@ -7,10 +7,12 @@ class ApplicationController < ActionController::Base
 
   before_filter :parse_domain, :parse_path
 
+  # used to define only domain specific javascript files
   def scripts
     ["#{ @domain }/application.js"]
   end
 
+  # used to define only domain specific css files
   def css
     ["#{ @domain }/application.css"]
   end
