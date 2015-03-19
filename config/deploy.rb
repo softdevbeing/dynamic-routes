@@ -36,6 +36,13 @@ set :repo_url, 'git@github.com:softdevbeing/dynamic-routes.git'
 
 namespace :deploy do
 
+  desc 'copy database.yml.example to database.yml'
+  task :cp_db_config do
+    on roles(:app), :in => :sequence, :wait => 5 do
+      execute :cp, "#{ release_path }/config/database.yml.example", "#{ release_path }/config/database.yml"
+    end
+  end
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -44,5 +51,7 @@ namespace :deploy do
       # end
     end
   end
+
+  before :compile_assets, :cp_db_config
 
 end

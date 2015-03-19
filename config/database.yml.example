@@ -1,9 +1,7 @@
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   pool: 5
   timeout: 5000
-  username: ruby-guy
-  password: password
 
 development:
   <<: *default
