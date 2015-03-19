@@ -70,7 +70,7 @@ If you are going to migrate server, please follow these steps.
         Uncomment following
             passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
         And add this
-            passenger_ruby /home/deploy/.rvm/wrappers/ruby-2.1.5/ruby;
+            passenger_ruby /home/ubuntu/.rvm/wrappers/ruby-2.1.5/ruby;
 
     6. Adding The Nginx Host
         Open up /etc/nginx/sites-enabled/default & replace the file's contents with the following:
@@ -90,6 +90,3 @@ If you are going to migrate server, please follow these steps.
                     root   html;
                 }
         }
-
-
-
