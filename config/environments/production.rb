@@ -83,8 +83,8 @@ Rails.application.configure do
       js_path = File.join entry, 'application.js'
       css_path = File.join entry, 'application.js'
 
-      config.assets.precompile += js_path
-      config.assets.precompile += css_path
+      config.assets.precompile += [ js_path ]
+      config.assets.precompile += [ css_path ]
     end
   end
 end
