@@ -37,7 +37,8 @@ Please feel free to use a different markup language if you do not plan to run
 
 
 If you are going to migrate server, please follow these steps.
-    1. connect to your CLOUD server using ssh
+    1. Install git
+        sudo apt-get install git
 
     2. Install RVM, Ruby 2.1.5 using RVM
         sudo apt-get update

@@ -19,3 +19,6 @@ config/database.yml
 
 .idea/
 .idea*
+
+.capistrano*
+.capistrano/*

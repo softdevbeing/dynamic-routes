@@ -24,6 +24,7 @@ require 'capistrano/rails'
 # require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
 
+require 'capistrano/bundler'
 require 'capistrano/rvm'
 
 set :rvm_type, :user
