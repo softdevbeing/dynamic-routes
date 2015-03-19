@@ -71,5 +71,24 @@ If you are going to migrate server, please follow these steps.
         And add this
             passenger_ruby /home/deploy/.rvm/wrappers/ruby-2.1.5/ruby;
 
+    6. Adding The Nginx Host
+        Open up /etc/nginx/sites-enabled/default & replace the file's contents with the following:
+
+        server {
+                listen 80 default_server;
+                listen [::]:80 default_server ipv6only=on;
+
+                server_name ec2-52-10-155-205.us-west-2.compute.amazonaws.com;
+                passenger_enabled on;
+                rails_env    production;
+                root         /home/ubuntu/dynamic-routes/current/public;
+
+                # redirect server error pages to the static page /50x.html
+                error_page   500 502 503 504  /50x.html;
+                location = /50x.html {
+                    root   html;
+                }
+        }
+
 
 

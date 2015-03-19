@@ -2,13 +2,13 @@
 lock '3.3.5'
 
 set :application, 'dynamic-routes'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :repo_url, 'git@github.com:softdevbeing/dynamic-routes.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+  set :deploy_to, '/home/ubuntu/dynamic-routes'
 
 # Default value for :scm is :git
 # set :scm, :git
