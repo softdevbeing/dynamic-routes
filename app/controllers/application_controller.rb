@@ -19,7 +19,10 @@ class ApplicationController < ActionController::Base
 
   private
   def parse_domain
+    available_domains = %w{ www.refurbwarehousedeals.com www.koupon.co www.ziyuu.com }
+
     @domain = request.host.downcase
+    @domain = available_domains.first unless available_domains.include? @domain
   end
 
   def parse_path
