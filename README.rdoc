@@ -31,9 +31,11 @@ Please feel free to use a different markup language if you do not plan to run
 
 == Work overflow
 * Serve different front-end based on domain
-    www.koupon.co
     www.refurbwarehousedeals.com
+    www.koupon.co
     www.ziyuu.com
+
+    if domain is not listed in white list, will serve front-end of www.refurbwarehousedeals.com
 
 
 If you are going to migrate server, please follow these steps.
